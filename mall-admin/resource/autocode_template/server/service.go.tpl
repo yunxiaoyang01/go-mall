@@ -10,42 +10,42 @@ import (
 type {{.StructName}}Service struct {
 }
 
-// Create{{.StructName}} 创建{{.StructName}}记录
+// Create{{.StructName}} 创建{{.Description}}记录
 // Author [piexlmax](https://github.com/piexlmax)
 func ({{.Abbreviation}}Service *{{.StructName}}Service) Create{{.StructName}}({{.Abbreviation}} {{.Package}}.{{.StructName}}) (err error) {
 	err = global.GVA_DB.Create(&{{.Abbreviation}}).Error
 	return err
 }
 
-// Delete{{.StructName}} 删除{{.StructName}}记录
+// Delete{{.StructName}} 删除{{.Description}}记录
 // Author [piexlmax](https://github.com/piexlmax)
 func ({{.Abbreviation}}Service *{{.StructName}}Service)Delete{{.StructName}}({{.Abbreviation}} {{.Package}}.{{.StructName}}) (err error) {
 	err = global.GVA_DB.Delete(&{{.Abbreviation}}).Error
 	return err
 }
 
-// Delete{{.StructName}}ByIds 批量删除{{.StructName}}记录
+// Delete{{.StructName}}ByIds 批量删除{{.Description}}记录
 // Author [piexlmax](https://github.com/piexlmax)
 func ({{.Abbreviation}}Service *{{.StructName}}Service)Delete{{.StructName}}ByIds(ids request.IdsReq) (err error) {
 	err = global.GVA_DB.Delete(&[]{{.Package}}.{{.StructName}}{},"id in ?",ids.Ids).Error
 	return err
 }
 
-// Update{{.StructName}} 更新{{.StructName}}记录
+// Update{{.StructName}} 更新{{.Description}}记录
 // Author [piexlmax](https://github.com/piexlmax)
 func ({{.Abbreviation}}Service *{{.StructName}}Service)Update{{.StructName}}({{.Abbreviation}} {{.Package}}.{{.StructName}}) (err error) {
 	err = global.GVA_DB.Save(&{{.Abbreviation}}).Error
 	return err
 }
 
-// Get{{.StructName}} 根据id获取{{.StructName}}记录
+// Get{{.StructName}} 根据id获取{{.Description}}记录
 // Author [piexlmax](https://github.com/piexlmax)
 func ({{.Abbreviation}}Service *{{.StructName}}Service)Get{{.StructName}}(id uint) ({{.Abbreviation}} {{.Package}}.{{.StructName}}, err error) {
 	err = global.GVA_DB.Where("id = ?", id).First(&{{.Abbreviation}}).Error
 	return
 }
 
-// Get{{.StructName}}InfoList 分页获取{{.StructName}}记录
+// Get{{.StructName}}InfoList 分页获取{{.Description}}记录
 // Author [piexlmax](https://github.com/piexlmax)
 func ({{.Abbreviation}}Service *{{.StructName}}Service)Get{{.StructName}}InfoList(info {{.Package}}Req.{{.StructName}}Search) (list interface{}, total int64, err error) {
 	limit := info.PageSize

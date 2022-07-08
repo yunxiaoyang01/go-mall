@@ -109,7 +109,7 @@ autocode:
   # root 自动适配项目根目录
   # 请不要手动配置,他会在项目加载的时候识别出根路径
   root: ""
-  server: /server
+  server: /mall-admin
   server-plug: /plugin/%s
   server-api: /api/v1/%s
   server-initialize: /initialize
@@ -117,7 +117,7 @@ autocode:
   server-request: /model/%s/request/
   server-router: /router/%s
   server-service: /service/%s
-  web: /web/src
+  web: /mall-web-admin/src
   web-api: /api
   web-form: /view
   web-table: /view
